@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Twemoji</title>
+    <meta
+      name="description"
+      content="This tool lets you download an emoji's Twemoji in SVG."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="boilerplate.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Download Twemoji</h1>
+        <p>This tool lets you download an emoji's Twemoji in SVG.</p>
+      </header>
+      <main>
+        <p id="error-message"></p>
+        <form id="form">
+          <label for="emoji-input">Emoji:</label>
+          <input type="text" name="emoji-input" id="emoji-input" />
+          <input type="submit" value="Download" />
+        </form>
+        <p id="twemoji" hidden></p>
+      </main>
+      <footer>
+        <p>
+          <a href="https://twemoji.twitter.com/">Twemoji</a> is
+          <a href="https://twitter.com/">Twitter</a>'s open-source emoji
+          library.
+        </p>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+  font-family: "Syne", sans-serif;
+  text-align: center;
+}
+
+a,
+a:visited {
+  color: #005fd1;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited:hover {
+  text-decoration: underline;
+}
+
+footer {
+  color: #657786;
+}
+
+#error-message {
+  color: #e0245e;
+  display: none;
+}
+
+#twemoji {
+  display: none;
+}

@@ -1,26 +1,32 @@
 body {
-  font-family: "Syne", sans-serif;
+  padding-left: calc(var(--spacing) * 3);
+  padding-right: calc(var(--spacing) * 3);
   text-align: center;
 }
 
-a,
-a:visited {
-  color: #005fd1;
-  text-decoration: none;
+.header {
+  padding-bottom: calc(var(--block-spacing-vertical) * 0.5);
 }
 
-a:hover,
-a:visited:hover {
-  text-decoration: underline;
+.header .title {
+  margin-bottom: var(--spacing);
 }
 
-footer {
-  color: #657786;
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  text-align: left;
 }
 
 #error-message {
-  color: #e0245e;
   display: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 #twemoji {

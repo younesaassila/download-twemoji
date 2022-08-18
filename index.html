@@ -5,15 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download Twemoji</title>
-    <meta
-      name="description"
-      content="This tool lets you download an emoji's Twemoji in SVG."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="description" content="Download a Twemoji in SVG or PNG." />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
     />
     <link rel="stylesheet" href="boilerplate.css" />
     <link rel="stylesheet" href="style.css" />
@@ -23,28 +18,33 @@
     ></script>
   </head>
   <body>
-    <div id="app">
-      <header>
-        <h1>Download Twemoji</h1>
-        <p>This tool lets you download an emoji's Twemoji in SVG.</p>
-      </header>
-      <main>
-        <p id="error-message"></p>
-        <form id="form">
-          <label for="emoji-input">Emoji:</label>
-          <input type="text" name="emoji-input" id="emoji-input" />
-          <input type="submit" value="Download" />
-        </form>
-        <p id="twemoji" hidden></p>
-      </main>
-      <footer>
-        <p>
-          <a href="https://twemoji.twitter.com/">Twemoji</a> is
-          <a href="https://twitter.com/">Twitter</a>'s open-source emoji
-          library.
-        </p>
-      </footer>
-    </div>
+    <header class="header">
+      <h1 class="title">Download Twemoji</h1>
+      <p>Download a Twemoji in SVG or PNG.</p>
+    </header>
+    <form id="form" class="form">
+      <label for="emoji-input">Emoji:</label>
+      <input type="text" name="emoji-input" id="emoji-input" required />
+      <small id="error-message"></small>
+      <label for="format-select">Format:</label>
+      <select name="format-select" id="format-select" required>
+        <option value="svg" selected>SVG</option>
+        <option value="png-72x72">PNG (72x72)</option>
+      </select>
+      <input type="submit" value="Download" />
+    </form>
+    <footer class="footer">
+      <p>
+        <a href="https://twemoji.twitter.com/">Twemoji</a> is
+        <a href="https://twitter.com/">Twitter</a>’s open-source emoji library.
+      </p>
+      <p>
+        <a href="https://github.com/younesaassila/discord-status-countdown">
+          View Download Twemoji on GitHub
+        </a>
+      </p>
+    </footer>
+    <p id="twemoji" hidden></p>
     <script src="app.js"></script>
   </body>
 </html>

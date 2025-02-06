@@ -11,7 +11,7 @@ form.addEventListener("submit", (e) => {
   const emoji = formData.get("emoji-input");
   const format = formatSelectElement.value || "svg";
   const [extension, folder] = format.split("-");
-  twemojiElement.textContent = emoji ? emoji.trim() : "";
+  twemojiElement.textContent = emoji ? emoji.toString().trim() : "";
   try {
     twemoji.parse(twemojiElement, {
       folder: folder || extension,

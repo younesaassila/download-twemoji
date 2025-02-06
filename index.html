@@ -2,44 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download Twemoji</title>
     <meta name="description" content="Download a Twemoji in SVG or PNG." />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
-    <link rel="stylesheet" href="boilerplate.css" />
+    <link rel="stylesheet" href="https://cdn.aassila.com/css/boilerplate.css" />
     <link rel="stylesheet" href="style.css" />
     <script
-      src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+      src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <header class="header">
-      <h1 class="title">Download Twemoji</h1>
+    <header class="container">
+      <h1>Download Twemoji</h1>
       <p>Download a Twemoji in SVG or PNG.</p>
     </header>
-    <form id="form" class="form">
-      <label for="emoji-input">Emoji:</label>
-      <input type="text" name="emoji-input" id="emoji-input" required />
-      <small id="error-message"></small>
-      <label for="format-select">Format:</label>
-      <select name="format-select" id="format-select" required>
-        <option value="svg" selected>SVG</option>
-        <option value="png-72x72">PNG (72x72)</option>
-      </select>
-      <input type="submit" value="Download" />
-    </form>
-    <footer class="footer">
+    <main class="container">
+      <form id="form">
+        <label for="emoji-input">Emoji:</label>
+        <input type="text" name="emoji-input" id="emoji-input" required />
+        <small id="error-message"></small>
+        <label for="format-select">Format:</label>
+        <select name="format-select" id="format-select" required>
+          <option value="svg" selected>SVG</option>
+          <option value="png-72x72">PNG (72x72)</option>
+        </select>
+        <input type="submit" value="Download" />
+      </form>
+    </main>
+    <footer class="container">
       <p>
-        <a href="https://twemoji.twitter.com/">Twemoji</a> is
+        <a href="https://github.com/jdecked/twemoji">Twemoji</a> was
         <a href="https://twitter.com/">Twitter</a>’s open-source emoji library.
       </p>
       <p>
-        <a href="https://github.com/younesaassila/discord-status-countdown">
+        <a href="https://github.com/younesaassila/download-twemoji">
           View Download Twemoji on GitHub
         </a>
       </p>
